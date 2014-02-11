@@ -1,0 +1,29 @@
+<div class="row-fluid">
+  <div class="span12">
+    <h1>
+      bootstrap-datepicker.js
+    </h1>
+    <hr>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <form class="form-horizontal" name="form">
+      <div class="input-daterange input-prepend input-append" id="datepicker">
+        <input type="text" class="input-small" name="start" bs-datepicker data-ng-model="startDate" />
+        <span class="add-on">to</span>
+        <input type="text" class="input-small" name="end" bs-datepicker data-ng-model="endDate" />
+        <button class="btn" data-ng-click="startDate = null; endDate = null;">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<% provide :page_specific_javascripts do %>
+  <script>
+    $(document).ready(function() {
+     $('.input-daterange').datepicker();
+    });
+  </script>
+<% end %>

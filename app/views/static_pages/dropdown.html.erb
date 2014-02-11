@@ -1,0 +1,61 @@
+<div class="row-fluid">
+  <div class="span12">
+    <h1>
+      dropdown
+    </h1>
+    <hr />
+  </div>
+</div>
+
+
+<div class="menu-item">Hello world.</div>
+
+
+<% provide :page_specific_javascripts do %>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script>
+    var MENU = [
+      {
+        'title': 'Item 1',
+        'submenu': null,
+      },
+      {
+        'title': 'Item 2',
+        'submenu': null,
+      },
+      {
+        'title': 'Item 3',
+        'submenu': [
+          {
+            'title': 'Sub 1',
+            'submenu': null,
+          },
+          {
+            'title': 'Sub 2',
+            'submenu': null,
+          },
+          {
+            'title': 'Sub 3',
+            'submenu': [
+              {
+                'title': 'SubSub 1',
+                'submenu': null,
+              },
+              {
+                'title': 'SubSub 2',
+                'submenu': null,
+              },
+              {
+                'title': 'SubSub 3',
+                'submenu': null,
+              },
+            ]
+          }
+        ]
+      }
+    ];
+    $(function () {
+      console.log(MENU)
+    });
+  </script>
+<% end %>

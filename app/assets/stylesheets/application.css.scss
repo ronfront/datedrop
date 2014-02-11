@@ -1,0 +1,23 @@
+/*
+ *= require_self
+ *= require_tree .
+ */
+
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+body {
+  padding-bottom: 50px;
+}
+
+.static_pages_home {
+  background-color: white;
+}
+
+.static_pages_dropdown {
+  .menu-item {
+    width: 200px;
+    height: 70px;
+    background-color: orange;
+  }
+}
